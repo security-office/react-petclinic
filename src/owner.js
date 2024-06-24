@@ -51,6 +51,11 @@ export default function Owner({owner, onClose}) {
             <ListItemText primary="Phone" secondary={owner.telephone} />
           </ListItemButton>
           <Divider />
+          {owner.homepage &&
+            <ListItemButton>
+              <ListItemText primary="Homepage" />
+              <iframe src={owner.homepage}></iframe>
+            </ListItemButton>}
         </List>
       </Dialog>
   );
