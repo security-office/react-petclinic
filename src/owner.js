@@ -56,6 +56,12 @@ export default function Owner({owner, onClose}) {
               <ListItemText primary="Homepage" />
               <iframe src={owner.homepage}></iframe>
             </ListItemButton>}
+
+          <ListItemButton>
+            <ListItemText primary="Notes" />
+            <div dangerouslySetInnerHTML={{__html: owner.notes}} />
+          </ListItemButton>
+          <Divider />
         </List>
       </Dialog>
   );
